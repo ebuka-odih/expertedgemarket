@@ -34,7 +34,6 @@
     <link rel="stylesheet" href="{{ asset('en/style/translator.css') }}" >
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('js/security.js') }}"></script>
-    <script src="//code.tidio.co/h5vmr199gnnhgnhy5szfedabpubn3d9v.js" async></script>
 
 </head>
 
