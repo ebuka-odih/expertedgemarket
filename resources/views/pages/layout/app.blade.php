@@ -57,7 +57,7 @@
                         <!-- module logo begin -->
                         <div>
                             <a class="" href="{{ route('index') }}">
-                                <h3 style="font-weight: bolder">{{ env('APP_NAME') }}</h3>
+                                <h3 style="font-weight: bolder; color: white">{{ env('APP_NAME') }}</h3>
 {{--                                <img class="uk-margin-small-right in-offset-top-10" style="margin-top: 3px" src="{{ asset('img2/logo.png') }}" data-src="{{ asset('img2/logo.png') }}" alt="{{ env('APP_NAME') }}" width="134" height="23" data-uk-img=""> --}}
                             </a>
                             <div id="google_translate_element"></div>
