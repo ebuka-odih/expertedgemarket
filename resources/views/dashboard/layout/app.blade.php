@@ -97,7 +97,7 @@
                             <h6 class="main-notification-title"> </h6>
 
                         </div>
-                        <a class="dropdown-item border-top" href="profile.php">
+                        <a class="dropdown-item border-top" href="{{ route('user.profile') }}">
                             <i class="fe fe-user"></i> My Profile
                         </a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
