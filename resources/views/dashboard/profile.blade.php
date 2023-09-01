@@ -64,7 +64,7 @@
                                                 <div class="main-profile-social-list mg-sm-r-20 mg-b-10">
                                                     <div class="media">
                                                         <div class="media-icon bg-info-transparent text-info"> <i class="icon fa fa-genderless"></i> </div>
-                                                        <div class="media-body"> <span>Gender</span> <a href="javascript:;">Female</a> </div>
+                                                        <div class="media-body"> <span>Gender</span> <a href="javascript:;">{{ $user->gender }}</a> </div>
                                                     </div>
                                                 </div>
                                             </div>
