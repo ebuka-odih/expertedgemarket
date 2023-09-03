@@ -95,25 +95,16 @@
 
 
 
-                                <h2>Username: 1T8CV</h2>
-                                <span><strong>Accuracy:</strong> 55%</span><br>
-                                <span><strong>Trades Won in Ratio:</strong>60%</span><br>
-                                <span><strong>Trades lost in Ratio:</strong> 40%</span><br>
-                                <span><strong>Trade Percentage:</strong> 20%</span>
+                                <h2>Username: {{ $item->username }}</h2>
+                                <span><strong>Accuracy:</strong> {{ $item->accuracy }}%</span><br>
+                                <span><strong>Trades Won in Ratio:</strong>{{ $item->won_trades }}%</span><br>
+                                <span><strong>Trades lost in Ratio:</strong> {{ $item->lost_trades }}%</span><br>
+                                <span><strong>Trade Percentage:</strong> {{ $item->lost_trades }}%</span>
                                 <br>
-                                <p>Supported By Whirl Wind Invts.</p>
+                                <p>Supported By Expert Edge Market.</p>
 
                                 <form method="POST" action="">
 
-                                    <input type="hidden" name="user_id" value="1T8CV">
-
-                                    <input type="hidden" name="accuracy" value="55">
-
-                                    <input type="hidden" name="won_ratio" value="60">
-
-                                    <input type="hidden" name="username" value="nancy112">
-
-                                    <input type="hidden" name="loss_ratio" value="40">
 
                                     <input type="hidden" name="percentage" value="20">
 
