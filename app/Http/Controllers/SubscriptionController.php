@@ -35,6 +35,10 @@ class SubscriptionController extends Controller
                 $sub->amount = $request->amount;
                 $sub->status = 1;
                 $sub->save();
+                $user = User::findOrFail($sub->user_id);
+                $user->balance -= $sub->amount;
+                $user->invested += $sub->amount;
+                $user->save();
                 return redirect()->route('user.investmentDetails', $sub->id);
             }
         }

@@ -66,4 +66,5 @@ class AdminDefundController extends Controller
         $fund->delete();
         return redirect()->back()->with('success', 'deleted successfully');
     }
+    
 }

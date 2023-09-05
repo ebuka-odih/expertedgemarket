@@ -28,6 +28,7 @@ class CopyTradeController extends Controller
         $data->user_id = $request->user_id;
         $user = User::findOrFail($request->user_id);
         $user->balance -= 500;
+        $user->invested += 500;
         $user->save();
         $data->save();
         return redirect()->back()->with('success', "Trader Copied Successfully");
