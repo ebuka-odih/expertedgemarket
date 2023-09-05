@@ -2,10 +2,9 @@
 
 namespace App;
 
-use AmrShawky\LaravelCurrency\Facade\Currency;
 use Illuminate\Database\Eloquent\Model;
 
-class Funding extends Model
+class Defund extends Model
 {
     protected $guarded = [];
     public function user()

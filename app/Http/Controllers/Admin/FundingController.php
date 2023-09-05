@@ -14,7 +14,7 @@ class FundingController extends Controller
     public function fund()
     {
         $users = User::where('admin', 0)->get();
-        $funds = Funding::all();
+        $funds = Funding::latest()->get();
         return view('admin.user.add-fund', compact('users', 'funds'));
     }
     public function sendFund(Request $request)
@@ -63,28 +63,12 @@ class FundingController extends Controller
         return $request->validate($rules);
     }
 
-    public function defund()
+
+    public function deleteFund($id)
     {
-        $users = User::where('admin', 0)->get();
-        return view('admin.user.defund', compact('users'));
-    }
-    public function sendDefund(Request $request)
-    {
-        $data = $this->getData($request);
-        $data['user_id'] = $request->user_id;
-        $data['status'] = 1;
-        $data = Funding::create($data);
-        if ($data['type'] == 'Referral-Bonus'){
-            $user = User::findOrFail($data->user_id);
-            $user->ref_bonus -= $request->amount;
-            $user->balance -= $request->amount;
-            $user->save();
-        }
-        $user = User::findOrFail($data->user_id);
-        $user->balance -= $request->amount;
-        $user->profit -= $request->amount;
-        $user->save();
-        return redirect()->back()->with('debit', "Account debited successfully");
+        $fund = Funding::findOrFail($id);
+        $fund->delete();
+        return redirect()->back()->with('success', 'deleted successfully');
     }
 
 }

@@ -41,6 +41,9 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('fund/user', "Admin\FundingController@fund")->name('fund');
     Route::post('fund/user', "Admin\FundingController@sendFund")->name('sendFund');
 
+    Route::get('debit/user', "Admin\AdminDefundController@debit")->name('debit');
+    Route::post('debit/user', "Admin\AdminDefundController@sendDefund")->name('sendDefund');
+
     Route::resource('wallet', "Admin\PaymentMethodController");
     Route::resource('copy-traders', "Admin\AdminCopyTraderController");
     Route::resource('signal', "Admin\AdminSignalController");

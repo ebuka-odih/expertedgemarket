@@ -117,7 +117,7 @@
                                 <th>User</th>
                                 <th>Fund Type</th>
                                 <th>Amount</th>
-                                <th>Action</th>
+                                <th>Status</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -127,9 +127,7 @@
                                     <td>{{ $item->user->fullname() }}</td>
                                     <td>{{ $item->fund_type() }}</td>
                                     <td>$@money($item->amount)</td>
-                                    <td>
-
-                                    </td>
+                                    <td>{!! $item->status() !!}</td>
                                 </tr>
                             @endforeach
                             </tbody>
