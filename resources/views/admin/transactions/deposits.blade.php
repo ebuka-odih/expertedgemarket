@@ -76,10 +76,45 @@
                                                                 <a href="{{ route('admin.view_deposit', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="View Deposit" data-bs-original-title="View">
                                                                     <i class="fa fa-eye"></i>
                                                                 </a>
-                                                                <a href="{{ route('admin.approve_deposit', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="Approve Deposit" data-bs-original-title="Approve">
+                                                                <a class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="modal" data-bs-target="#modal-block-popin">
                                                                     <i class="fa fa-check"></i>
                                                                 </a>
-                                                                {{--                                                    <a href="{{ route('admin.approve_deposit', $item->id) }}" class="btn btn-sm btn-success mb-1">Approve</a>--}}
+
+                                                                <div class="modal fade" id="modal-block-popin" tabindex="-1" aria-labelledby="modal-block-popin"  aria-modal="true" role="dialog">
+                                                                    <div class="modal-dialog modal-dialog-popin" role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="block block-rounded block-themed block-transparent mb-0">
+                                                                                <div class="block-header bg-primary-dark">
+                                                                                    <h3 class="block-title">Fund Account</h3>
+                                                                                    <div class="block-options">
+                                                                                        <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                                                                                            <i class="fa fa-fw fa-times"></i>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="block-content">
+                                                                                    <form action="{{ route('admin.approve_deposit', $item->id) }}" method="POST">
+                                                                                        @csrf
+                                                                                        <div class="row">
+                                                                                            <select name="wallet" id="" class="form-control" required="">
+                                                                                                <option >Choose Wallet</option>
+                                                                                                <option value="main">Main Balance</option>
+                                                                                                <option value="invest">Investment Balance</option>
+                                                                                            </select>
+                                                                                            <button type="submit" class="btn btn-primary col-lg-6 mt-2">Approve Deposit</button>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                    <br>
+                                                                                </div>
+                                                                                <div class="block-content block-content-full text-end bg-body">
+                                                                                    <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-dismiss="modal">Close</button>
+                                                                                    <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Done</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
                                                             @else
                                                             @endif
                                                             <form method="POST" action="{!! route('admin.deleteDeposit', $item->id) !!}" accept-charset="UTF-8">
@@ -95,7 +130,6 @@
                                                                 </div>
 
                                                             </form>
-                                                            <button type="button" class="btn btn-sm btn-primary push mt-2" data-bs-toggle="modal" data-bs-target="#modal-block-popin">Edit Date</button>
 
                                                         </td>
                                                     </tr>

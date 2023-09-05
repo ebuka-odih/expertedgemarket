@@ -56,18 +56,7 @@
                                                 <input type="number" name="amount" placeholder="Amount" class="form-control " id="cryptoamt" min="" minlength="3" required="">
                                             </div>
                                         </div>
-                                        <div class="form-group mt-2">
-                                            <label for="to">
-                                                <h6>To</h6>
-                                            </label>
-                                            <div class="input-group">
-                                                <select class="form-control text-primary" name="to" id="to" required="">
-                                                    <option value="trade">Trading</option>
-                                                    <option value="mine">Mining</option>
-                                                </select>
-                                                <span class="input-group-text"><i class="icofont-caret-down"></i></span>
-                                            </div>
-                                        </div>
+
                                         <div class="form-group mt-2">
                                             <button type="submit" class="btn btn-primary btn-block shadow-sm" id="btn-crypto"> Proceed </button>
                                             <input type="hidden" name="typ" value="crypto">
@@ -81,7 +70,7 @@
                                             <h2 class="text-center">Bank Deposit</h2>
                                             <div class="alert">
                                                 <p class="font-weight-bold text-center">Contact us from the live chat or send an email to
-                                                    <a href="mailto:support@tokendirecthub.com">support@tokendirecthub.com</a> to provide an account to make your deposit</p>
+                                                    <a href="mailto:{{ env('MAIL_FROM_ADDRESS') }}">{{ env('MAIL_FROM_ADDRESS') }}</a> to provide an account to make your deposit</p>
                                             </div>
                                             <p class="text-muted">Note: Minimum deposit is USD 5,000 </p>
                                         </div>

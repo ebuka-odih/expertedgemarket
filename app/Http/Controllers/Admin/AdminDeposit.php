@@ -23,11 +23,19 @@ class AdminDeposit extends Controller
         return view('admin.transactions.deposit-details', compact('deposit'));
     }
 
-    public function approve_deposit($id)
+    public function approve_deposit(Request $request, $id)
     {
         $deposit = Deposit::findOrFail($id);
         $user = \App\User::findOrFail($deposit->user_id);
-        $user->balance += $deposit->amount;
+        if ($request->wallet == 'main'){
+            $user->balance += $deposit->amount;
+            $user->save();
+            $deposit->status = 1;
+            $deposit->save();
+            Mail::to($user->email)->send(new ApproveDeposit($deposit));
+            return redirect()->back()->with('success', "Deposit approved successfully");
+        }
+        $user->invested += $deposit->amount;
         $user->save();
         $deposit->status = 1;
         $deposit->save();

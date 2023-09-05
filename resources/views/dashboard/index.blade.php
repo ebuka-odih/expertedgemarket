@@ -90,7 +90,7 @@
                                         <div class="transaction-details d-flex">
                                             <div>
                                                 <span class="text-dark tx-bold-12"> Total Invested</span>
-                                                <h5 class="text-muted tx-bold-12" id="deposit"> {{ auth()->user()->currency }} @money($investment)</h5></div>
+                                                <h5 class="text-muted tx-bold-12" id="deposit"> {{ auth()->user()->currency }} @money(auth()->user()->invested)</h5></div>
 
                                         </div>
 

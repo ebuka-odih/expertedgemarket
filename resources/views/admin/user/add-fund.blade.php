@@ -81,10 +81,10 @@
                                     <label class="form-label"  for="example-email-input">Type of Fund</label>
                                     <select name="type" id="" class="form-control ">
                                         <option disabled selected>Select </option>
+                                        <option value="Balance">Main Balance</option>
+                                        <option value="Invested">Invested Balance</option>
                                         <option value="Bonus">Bonus</option>
                                         <option value="Profit">Profit</option>
-                                        <option value="Referral-Bonus">Referral Bonus</option>
-                                        <option value="Loss">Loss</option>
                                     </select>
                                 </div>
                             </div>
@@ -105,6 +105,36 @@
 
 
                     </form>
+                </div>
+                <hr>
+                <br>
+                <div class="block-content">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>User</th>
+                                <th>Fund Type</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($funds as $item)
+                                <tr>
+                                    <td>{{ date('d M, Y', strtotime($item->created_at)) }}</td>
+                                    <td>{{ $item->user->fullname() }}</td>
+                                    <td>{{ $item->fund_type() }}</td>
+                                    <td>$@money($item->amount)</td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- END Elements -->
