@@ -96,6 +96,10 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Funding::class, 'user_id');
     }
+    public function defund()
+    {
+        return $this->hasMany(Defund::class, 'user_id');
+    }
 
     public function trade()
     {
