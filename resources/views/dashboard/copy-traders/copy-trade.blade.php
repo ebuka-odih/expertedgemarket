@@ -101,7 +101,7 @@
                                 <span><strong>Trades lost in Ratio:</strong> {{ $item->lost_trades }}%</span><br>
                                 <span><strong>Trade Percentage:</strong> {{ $item->lost_trades }}%</span>
                                 <br>
-                                <p>Supported By Expert Edge Market.</p>
+                                <p>Supported By {{ env('APP_NAME') }}.</p>
 
                                 <form method="POST" action="">
 

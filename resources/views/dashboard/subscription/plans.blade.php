@@ -36,7 +36,7 @@
                         <div class="card-body">
                             <div class="d-flex">
                                 <div class="mb-0">
-                                    <h5 class="fs-16 tx-medium">STANDARD</h5>
+                                    <h5 class="fs-16 tx-medium text-uppercase">{{ $item->name }}</h5>
                                     <h2 class="mt-2 mb-0 text-primary">{{ auth()->user()->currency }}@money($item->min_deposit) <span class="text-muted fs-12">/ Minimum</span></h2>
                                     <p class="text-dark mt-3 mb-0 fs-14">High ROI After Trading Session</p>
                                 </div>
