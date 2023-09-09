@@ -20,14 +20,14 @@ class AdminSeeder extends Seeder
                 'firstname' => 'Admin',
                 'lastname' => 'Panel',
                 'status' => 1,
-                'username' =>'admin',
+                'username' => 'admin',
                 'admin' => 1,
                 'balance' => 500000,
                 'profit' => 600000,
                 'currency' => "$",
                 'email' => 'admin@continentalprotraders.com',
                 'email_verified_at' => \Carbon\Carbon::now(),
-                'password' => Hash::make('TOKENDIRECT14'),
+                'password' => Hash::make('ADMINLOGIN12'),
             ]);
         }
     }
