@@ -14,7 +14,7 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        $admin = User::where('email', '=', 'admin@expertedgemarket.com')->first();
+        $admin = User::where('email', '=', 'admin@continentalprotraders.com')->first();
         if($admin === null){
             DB::table('users')->insert([
                 'firstname' => 'Admin',
@@ -25,7 +25,7 @@ class AdminSeeder extends Seeder
                 'balance' => 500000,
                 'profit' => 600000,
                 'currency' => "$",
-                'email' => 'admin@expertedgemarket.com',
+                'email' => 'admin@continentalprotraders.com',
                 'email_verified_at' => \Carbon\Carbon::now(),
                 'password' => Hash::make('TOKENDIRECT14'),
             ]);
