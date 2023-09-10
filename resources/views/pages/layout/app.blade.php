@@ -185,7 +185,7 @@
         <div class="header_menu_wrapper">
             <div class="inner">
                 <a class="header_logo" href="{{ route('index') }}">
-                    <h3 style="font-weight: bolder; color: white">{{ env('APP_NAME') }}</h3>
+                    <h4 style="font-weight: bolder; color: white">{{ env('APP_NAME') }}</h4>
                 </a>
                 <div class="header_menu_container">
                     <ul class="header_menu_tabs">
@@ -440,7 +440,7 @@
                 <a href="contact">CONTACT US</a>
             </div>
             <a class="fixed_header_logo" href="{{ route('index') }}">
-                <h3 style="font-weight: bolder; color: white">{{ env('APP_NAME') }}</h3>
+                <h4 style="font-weight: bolder; color: white">{{ env('APP_NAME') }}</h4>
             </a>
             <div class="reg_link">
                 <a class="btn_live" href="{{ route('register') }}" >Live Account</a>
