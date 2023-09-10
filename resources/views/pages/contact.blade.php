@@ -1,53 +1,97 @@
 @extends('pages.layout.app')
 @section('content')
 
-    <main>
-        <!-- section content begin -->
-        <div class="uk-section">
-            <div class="uk-container">
-                <div class="uk-grid">
-                    <div class="uk-width-3-5@m">
-                        <h1 class="uk-margin-remove-bottom">Contact Us</h1>
-                        <p class="uk-text-lead uk-text-muted uk-margin-small-top">Do not hesitate to reach out. Just fill in the contact form here and we’ll be sure to reply as fast as possible.</p>
-                    </div>
-                    <div class="uk-width-1-1@m uk-margin-large-top">
-                        <div class="uk-grid uk-grid-large" data-uk-grid="">
-                            <div class="uk-width-1-3@m uk-first-column">
-                                <h4 class="uk-margin-medium-top uk-margin-remove-bottom">Main Address</h4>
-                                <p class="uk-margin-small-top">Seagram Building, 600 Lexinton Ave 13th Floor,New York, NY 10022, United States </p>
-                                <h4 class="uk-margin-medium-top uk-margin-remove-bottom">Message us</h4>
-                                <p class="uk-margin-small-top">support@tokendirechub.com</p>
-                            </div>
-                            <div class="uk-width-2-3@m">
-                                <div class="uk-margin-medium-left in-margin-remove-left@s">
-                                    <form id="contact-form" class="uk-form uk-grid-small uk-grid" data-uk-grid="">
-                                        <div class="uk-width-1-2@s uk-inline uk-first-column">
-                                            <span class="uk-form-icon fas fa-user fa-sm"></span>
-                                            <input class="uk-input uk-border-rounded" id="name" name="name" type="text" placeholder="Full name">
-                                        </div>
-                                        <div class="uk-width-1-2@s uk-inline">
-                                            <span class="uk-form-icon fas fa-envelope fa-sm"></span>
-                                            <input class="uk-input uk-border-rounded" id="email" name="email" type="email" placeholder="Email address">
-                                        </div>
-                                        <div class="uk-width-1-1 uk-inline uk-grid-margin">
-                                            <span class="uk-form-icon fas fa-pen fa-sm"></span>
-                                            <input class="uk-input uk-border-rounded" id="subject" name="subject" type="text" placeholder="Subject">
-                                        </div>
-                                        <div class="uk-width-1-1 uk-grid-margin">
-                                            <textarea class="uk-textarea uk-border-rounded" id="message" name="message" rows="6" placeholder="Message"></textarea>
-                                        </div>
-                                        <div class="uk-width-1-1 uk-grid-margin">
-                                            <button class="uk-button uk-button-primary uk-border-rounded uk-align-right" id="sendemail" type="submit" name="submit">Send Message</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+    <div class="contact_us">
+        <div class="page_banner_content" style="background-image:url('../../assets/home/contact_us_banner.jpg'); background-position:center top; background-repeat:no-repeat; background-size:cover;">
+            <div class="inner">
+                <div class="tableBox">
+                    <div class="table_cellBox">
+                        <div class="text_box">
+                            <h2>Contact {{ env('APP_NAME') }}</h2>
+                            <h3>Need to Get in Touch with {{ env('APP_NAME') }}？</h3>
+                            <a href="register" class="red_arrow_button">open live account</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- section content end -->
-    </main>
+        <div class="page_content">
+            <div class="inner">
+                <div class="page_top_text">
+                    <h2><strong>Contact</strong> {{ env('APP_NAME') }}</h2>
+                    <p>If you have questions or would like more information, please get in touch with us through one of the methods below. We will endeavour to respond to all queries within 24 hours.</p>
+                    <ul class="contact_us_top_list">
+                        <li>
+                            <a href="mailto: info@whalescorp.co">
+                                <img src="../../assets/home/contact_new_email.png" alt="">
+                                <span class="__cf_email__" data-cfemail="493a3c3939263b3d093f28273d282e2c2f31672a2624">[info@whalescorp.co]</span>
+                            </a>
+                        </li>
+                        <!--<li>-->
+                        <!--   <a href="javascript:0;">-->
+                        <!--   <img src="https://whalescorp.co/assets/home/contact_new_phone.png" alt="">-->
+                        <!--   -->
+                        <!--   </a>-->
+                        <!--</li>-->
+                        <li>
+                            <a target="_blank" href="https://tawk.to/chat/60588437f7ce182709329b88/1f1cs8uj0" class="live_chat">
+                                <img src="../../assets/home/contact_new_chat.png" alt="">
+                                Live Chat
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact_us_adderss">
+                    <div class="address_box left">
+                        <div class="address_box_height">
+                            <h3>T-C Clients</h3>
+                            <p>For immediate response please call us on one of the below listed numbers, our support team is available 24 hours a day Monday - Friday.</p>
+                            <p>
+                                <!-- Phone : <a href="tel:1300945517">1300 945 517</a><br> -->
+                                <!--Phone : <a href="tel:"></a><br>-->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="address_box right">
+                        <div class="address_box_height">
+                            <h3>New to {{ env('APP_NAME') }}？</h3>
+                            <p>To open a {{ env('APP_NAME') }} account, please <a href="register" class="content_us_a">click here</a> . For any queries related to account opening, please contact us 9am - 5pm Monday - Friday</p>
+                            Email: <a href="mailto: info@whalescorp.co" class="content_us_a"><span class="__cf_email__" data-cfemail="7b1a1818140e150f083b0d1a150f1a1c1e1d0355181416">[info@whalescorp.co]</span></a><br>
+                            &nbsp;
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fast_easy_wrapper">
+        <div class="inner">
+            <h2 class="page_title_center"><strong>Fast & Easy</strong> Account Opening</h2>
+            <ul>
+                <li>
+                    <div class="text_box">
+                        <h4>Register</h4>
+                        <p>Choose an account type and submit your application</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="text_box">
+                        <h4>Fund</h4>
+                        <p>Fund your account using a wide range of funding methods.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="text_box">
+                        <h4>Trade</h4>
+                        <p>The ATS will go live immediately fund reflects</p>
+                    </div>
+                </li>
+            </ul>
+            <a href="register">open live account</a>
+            <div class="clear"></div>
+        </div>
+    </div>
 
 @endsection
