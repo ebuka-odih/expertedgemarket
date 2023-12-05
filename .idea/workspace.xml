@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/transactions/withdrawal-detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/transactions/withdrawal-detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/transactions/withdrawal-detail.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +194,7 @@
       <workItem from="1694282856420" duration="2437000" />
       <workItem from="1694331218979" duration="2004000" />
       <workItem from="1694384966495" duration="1420000" />
-      <workItem from="1701804704166" duration="301000" />
+      <workItem from="1701804704166" duration="600000" />
     </task>
     <servers />
   </component>

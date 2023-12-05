@@ -60,7 +60,8 @@
                                                     <td class="d-none d-sm-table-cell text-success"> {{ $item->account() }}</td>
                                                     <td>
                                                         @if($item->status == 0)
-                                                            <a type="button" class="btn btn-sm btn-primary push" data-bs-toggle="modal" data-bs-target="#modal-block-popin{{ $item->id }}">Action</a>
+                                                            <a href="{{ route('admin.approve_withdrawal', $item->id) }}" class="btn btn-sm btn-primary push">Approve</a>
+{{--                                                            <a type="button" class="btn btn-sm btn-primary push" data-bs-toggle="modal" data-bs-target="#modal-block-popin{{ $item->id }}">Action</a>--}}
 {{--                                                            <a href="{{ route('admin.approve_withdrawal', $item->id) }}" class="btn btn-sm btn-success mb-1">Approve</a>--}}
                                                         @else
                                                         @endif
