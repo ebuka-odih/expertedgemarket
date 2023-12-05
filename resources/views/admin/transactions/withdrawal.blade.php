@@ -79,7 +79,7 @@
                                                 </tr>
 
                                                 <div class="modal fade" id="modal-block-popin{{ $item->id }}" tabindex="-1" aria-labelledby="modal-block-popin"  aria-modal="true" role="dialog">
-                                                    <div class="modal-dialog modal-dialog-popin" role="document">
+                                                    <div class="modal-dialog-centered" role="document">
                                                         <div class="modal-content">
                                                             <div class="block block-rounded block-themed block-transparent mb-0">
                                                                 <div class="block-header bg-primary-dark">
